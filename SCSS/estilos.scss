@@ -1,0 +1,60 @@
+@mixin tamaños ($altura,$ancho){
+    height: $altura;
+    width: $ancho;
+}
+body{
+    background-color:#fff;
+    cursor: pointer;
+    margin: 0;
+}
+.cont-padre{
+    height: 100vh;
+    /*margin: 20px auto;*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.contenedor{
+   @include tamaños(550px,50px );
+    perspective: 1000px;
+    margin: 0 3px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    }
+    .box{
+        @include tamaños(100%,50px);
+        transform-style: preserve-3d;
+        transition: .7s;
+        margin: 0 3px;
+        .elementos{
+            @include tamaños(100%,50px);
+            position: absolute;
+            img{
+                @include tamaños(100%,100% );
+                object-fit: cover;
+            }
+        }
+        $translate:25px;
+        .elementos:nth-child(1){
+            transform: rotateY(0deg) translateZ($translate);
+        }
+        .elementos:nth-child(2){
+            transform: rotateY(90deg) translateZ($translate);
+        }
+        
+       
+    }
+
+.clase1{
+    transform: rotateY(-90deg);
+}
+
+@media (max-width:500px)
+{
+    .cont-padre{
+        transform: scale(.7);
+    }
+}

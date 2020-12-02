@@ -1,0 +1,86 @@
+body {
+  background-color: #fff;
+  cursor: pointer;
+  margin: 0;
+}
+
+.cont-padre {
+  height: 100vh;
+  /*margin: 20px auto;*/
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor {
+  height: 550px;
+  width: 50px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  margin: 0 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box {
+  height: 100%;
+  width: 50px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: .7s;
+  transition: .7s;
+  margin: 0 3px;
+}
+
+.box .elementos {
+  height: 100%;
+  width: 50px;
+  position: absolute;
+}
+
+.box .elementos img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.box .elementos:nth-child(1) {
+  -webkit-transform: rotateY(0deg) translateZ(25px);
+          transform: rotateY(0deg) translateZ(25px);
+}
+
+.box .elementos:nth-child(2) {
+  -webkit-transform: rotateY(90deg) translateZ(25px);
+          transform: rotateY(90deg) translateZ(25px);
+}
+
+.box .elementos:nth-child(3) {
+  -webkit-transform: rotateY(-90deg) translateZ(25px);
+          transform: rotateY(-90deg) translateZ(25px);
+}
+
+.box .elementos:nth-child(4) {
+  -webkit-transform: rotateY(180deg) translateZ(25px);
+          transform: rotateY(180deg) translateZ(25px);
+}
+
+.clase1 {
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+/*# sourceMappingURL=estilos.css.map */
